@@ -8,8 +8,6 @@ featuredimage: /img/apeste.jpg
 tags:
   - francês
 ---
-O cara da banca me recomendou quando perguntei "E esse coronga hein?"
+_Recomendação de **PJ**_
 
-
-
-*Recomendação de **PJ***
+O cara da banca que me recomendou quando perguntei "*E esse coronga hein?*"

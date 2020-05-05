@@ -112,32 +112,45 @@ $menu-label-color: $white-ter
     vertical-align: middle
     display: inline
 
-// blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
-.blog-list-item header
+.posts
   display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  flex-direction: column;
+  align-items: center;
 
-.post-meta
+.posts__title
+  font-size: 2.25rem;
+
+.posts__content
+
+.post__item
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  background-color: #fff8ef;
+  margin: 2rem 0;
+  padding: 2rem;
+
+.post__item-img
+  flex: 1;
+
+.post__item-content
+  flex: 2;
+  padding: 0 1rem;
+.post__item-content p
+  font-size: 1.5rem;
+
+.post__item-title
+  flex: 2;
+  font-size: 1.5rem;
   font-weight: bold;
-
-
+  min-height: 6rem;
+  
+  
 @import "~bulma"
 
-
 // responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
-
 +mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+  .post__item
+    padding: 0.5rem;
+    flex-direction: column;

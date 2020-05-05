@@ -10,18 +10,17 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="posts__content">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
+               key={post.id}
+                className={`post__item ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="post__item-img">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -30,30 +29,13 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    {/* <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link> */}
+                <div className="post__item-content">
+                  <p className="post__item-title">
                     {post.frontmatter.title}
-                    {/* <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span> */}
                   </p>
-                </header>
-                <div>
                   <HTMLContent content={post.html} />
-                  {/* <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link> */}
                 </div>
               </article>
-            </div>
           ))}
       </div>
     )

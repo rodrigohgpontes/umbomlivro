@@ -8,8 +8,6 @@ featuredimage: /img/euridice.jpg
 tags:
   - romance
 ---
-O cara da banca recomendou quando falei "*E a Eurídice, hein?"*
+_Recomendação de **PJ**_
 
-
-
-*Recomendação de **PJ***
+O cara da banca que me recomendou quando perguntei "*E a Eurídice, hein?"*

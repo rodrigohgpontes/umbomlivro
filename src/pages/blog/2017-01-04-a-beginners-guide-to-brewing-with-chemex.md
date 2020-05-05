@@ -8,8 +8,6 @@ featuredimage: /img/soccer.jpg
 tags:
   - futebol
 ---
-O cara da banca recomendou quando falei "*E o curintia, hein?*"
+_Recomendação de **PJ**_
 
-
-
-*Recomendação de **PJ***
+O cara da banca que me recomendou quando perguntei "*E o curintia, hein?*"
