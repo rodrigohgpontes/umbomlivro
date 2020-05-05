@@ -8,6 +8,4 @@ featuredimage: /img/soccer.jpg
 tags:
   - futebol
 ---
-![How Soccer Explains the World: An Unlikely Theory of Globalization - Franklin Foer](/img/soccer.jpg "How Soccer Explains the World: An Unlikely Theory of Globalization - Franklin Foer")
-
 O cara da banca recomendou quando falei "*E o curintia, hein?*"
