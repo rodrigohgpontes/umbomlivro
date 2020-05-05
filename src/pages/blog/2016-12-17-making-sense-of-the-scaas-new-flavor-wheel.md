@@ -8,6 +8,4 @@ featuredimage: /img/apeste.jpg
 tags:
   - francês
 ---
-![A peste - Albert Camus](/img/apeste.jpg "A peste - Albert Camus")
-
 O cara da banca me recomendou quando perguntei "E esse coronga hein?"
