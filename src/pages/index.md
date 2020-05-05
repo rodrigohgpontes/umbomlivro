@@ -18,11 +18,11 @@ main:
   description: Main description
   image1:
     alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
+    image: /img/death_to_stock_marzocco_coffee_9.jpg
   image2:
     alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
+    image: /img/death_to_stock_marzocco_coffee_9.jpg
   image3:
     alt: Coffee beans
-    image: /img/products-grid1.jpg
+    image: /img/death_to_stock_marzocco_coffee_9.jpg
 ---
