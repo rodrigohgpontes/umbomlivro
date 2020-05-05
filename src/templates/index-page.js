@@ -20,10 +20,12 @@ export const IndexPageTemplate = ({
       className="full-width-image margin-top-0"
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          image && !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `center top`,
         backgroundAttachment: `fixed`,
+        backgroundSize: `auto 50%`,
+        backgroundRepeat: `no-repeat`
       }}
     >
       <div
@@ -66,19 +68,18 @@ export const IndexPageTemplate = ({
     </div>
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-12">
               <div className="content">
-                <div className="content">
+                {/* <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
-                </div>
-                <div className="columns">
+                </div> */}
+                {/* <div className="columns">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
                       {heading}
@@ -93,22 +94,21 @@ export const IndexPageTemplate = ({
                       See all products
                     </Link>
                   </div>
-                </div>
+                </div> */}
                 <div className="column is-12">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Ache seu livro
                   </h3>
                   <BlogRoll />
-                  <div className="column is-12 has-text-centered">
+                  {/* <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
                       Read more
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   </div>
@@ -173,20 +173,6 @@ export const pageQuery = graphql`
           description
         }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }

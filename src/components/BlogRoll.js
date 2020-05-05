@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Content, { HTMLContent } from '../components/Content'
 
 class BlogRoll extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class BlogRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-12" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -24,32 +25,33 @@ class BlogRoll extends React.Component {
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          alt: `capa do post ${post.frontmatter.title}`,
                         }}
                       />
                     </div>
                   ) : null}
                   <p className="post-meta">
-                    <Link
+                    {/* <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
+                    </Link> */}
+                    {post.frontmatter.title}
+                    {/* <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date}
-                    </span>
+                    </span> */}
                   </p>
                 </header>
-                <p>
-                  {post.excerpt}
-                  <br />
+                <div>
+                  <HTMLContent content={post.html} />
+                  {/* <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
                     Keep Reading →
-                  </Link>
-                </p>
+                  </Link> */}
+                </div>
               </article>
             </div>
           ))}
@@ -81,6 +83,7 @@ export default () => (
               fields {
                 slug
               }
+              html
               frontmatter {
                 title
                 templateKey
