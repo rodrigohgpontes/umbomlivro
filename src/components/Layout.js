@@ -38,6 +38,12 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap"
+        />
+
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />

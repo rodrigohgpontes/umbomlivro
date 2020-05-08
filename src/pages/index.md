@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Um bom livro
+title: um bom livro
 image: /img/death_to_stock_marzocco_coffee_9.jpg
-heading: Um bom livro
-subheading: Descubra o livro que você não sabia que precisava ler
+heading: um bom livro
+subheading: bons convidados recomendam bons livros
 mainpitch:
   title: Mainpitch title
   description: |

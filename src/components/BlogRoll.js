@@ -3,8 +3,13 @@ import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import Content, { HTMLContent } from "../components/Content";
+import BlogRollItem from "./BlogRollItem";
 
 class BlogRoll extends React.Component {
+  state = {
+    openItems: []
+  };
+
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -12,29 +17,17 @@ class BlogRoll extends React.Component {
     return (
       <div className="posts__content">
         {posts &&
-          posts.map(({ node: post }) => (
-            <article
-              key={post.id}
-              className={`post__item ${
-                post.frontmatter.featuredrecommendation ? "is-featured" : ""
-              }`}
-            >
-              {post.frontmatter.bookcover ? (
-                <div className="post__item-img">
-                  <PreviewCompatibleImage
-                    imageInfo={{
-                      image: post.frontmatter.bookcover,
-                      alt: `capa do post ${post.frontmatter.title}`
-                    }}
-                  />
-                </div>
-              ) : null}
-              <div className="post__item-content">
-                <p className="post__item-title">{post.frontmatter.title}</p>
-                <HTMLContent content={post.html} />
-              </div>
-            </article>
-          ))}
+          posts.map(({ node: post }) => {
+            const itemShouldBeOpen = this.state.openItems.includes(post.id);
+
+            return (
+              <BlogRollItem
+                postData={post}
+                key={post.id}
+                open={itemShouldBeOpen}
+              />
+            );
+          })}
       </div>
     );
   }
