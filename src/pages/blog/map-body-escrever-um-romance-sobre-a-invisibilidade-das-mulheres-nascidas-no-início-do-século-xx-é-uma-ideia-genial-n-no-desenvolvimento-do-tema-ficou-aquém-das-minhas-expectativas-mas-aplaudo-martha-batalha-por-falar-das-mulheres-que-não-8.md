@@ -6,16 +6,11 @@ bookauthor: Martha Batalha
 bookyear: 2016
 bookcover: /img/euridice.jpg
 guestname: Luciano Sobral
-guestbio: Luciano é economista, em pausa numa carreira no mercado financeiro
-  para um mestrado. Vivo entre Cambridge, MA e São Paulo.
+guestbio: Luciano é tudólogo, com especialização em economia, viagens, jazz e literatura.
 guestpicture: /img/pj.jpeg
-recommendationsummary: >-
-  Uma escrita muito bonita com laivos de Machado de Assis. Personagens bem
-  caracterizadas, um título muito eloquente.\
-
-  Mas eu queria mais Eurídice, e encontrei mais Guida Gusmão, sua irmã.
-recommendationaudience: Bom para quem gosta de uma escrita machadiana, mas
-  falando da perspectiva feminina do mundo.
+recommendationsummary: uma escrita muito bonita com laivos de Machado de Assis.
+  Personagens bem caracterizadas, um título muito eloquente.
+recommendationaudience: gosta de uma escrita machadiana, mas falando da perspectiva feminina do mundo.
 featuredrecommendation: false
 tags:
   - romance
