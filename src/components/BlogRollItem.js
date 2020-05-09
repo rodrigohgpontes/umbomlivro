@@ -5,7 +5,7 @@ import BackgroundImage from "gatsby-background-image";
 
 class BlogRollItem extends React.Component {
   state = {
-    open: true
+    open: false
   };
 
   componentDidMount() {
