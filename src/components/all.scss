@@ -1,3 +1,13 @@
+$black: #19171a;
+$red: #e9322e;
+$grey-lightest: #e3e4e3;
+$grey-light: #959794;
+$grey-dark: #45433e;
+$purple-lighter: #f8d7f8;
+$purple-light: #554353;
+$purple-dark: #543f52;
+$purple-bright: #a32a99;
+
 html {
   font-size: 16px;
 }
@@ -11,6 +21,7 @@ h4,
 h5,
 h6 {
   font-family: "Muli", sans-serif;
+  color: $black;
 }
 
 body {
@@ -24,16 +35,20 @@ body {
   height: 6rem;
   margin: 0 auto;
   padding: 1rem 0;
-  border-top: solid 4px black;
+  border-top: solid 4px $black;
 
   &:last-of-type {
-    border-bottom: solid 4px black;
+    border-bottom: solid 4px $black;
   }
 
   &__book {
     flex: 2;
 
     &-info {
+    }
+
+    &-cover {
+      display: none;
     }
 
     &-title {
@@ -63,12 +78,31 @@ body {
   }
 
   &__images {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1;
     height: 8rem;
     max-width: 4rem;
     margin: -1rem 0.5rem 0;
+
+    &-plus-sign {
+      position: absolute;
+      top: calc(50% - 1rem);
+      left: calc(50% - 1rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      color: $purple-bright;
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: -2px 0 2px white, 0 2px 2px white, 2px 0 2px white,
+        0 -2px 2px white;
+      cursor: pointer;
+      z-index: 101;
+    }
 
     &-guest {
       flex: 1;
@@ -82,6 +116,7 @@ body {
       bottom: 0;
       left: 0;
       width: 100%;
+      z-index: -1;
     }
   }
 
@@ -96,6 +131,10 @@ body {
     &-bio {
       display: none;
     }
+
+    &-picture {
+      display: none;
+    }
   }
 
   &__link {
@@ -106,15 +145,30 @@ body {
   &--open {
     height: auto;
     flex-direction: column;
+    padding: 1rem;
 
     .post {
       &__book {
         flex: 2;
+        display: flex;
+        flex-direction: column;
 
         &-info {
+          flex: 2;
+          display: flex;
+        }
+
+        &-cover {
+          flex: 1;
+          display: inline-block;
+        }
+
+        &-details {
+          flex: 2;
         }
 
         &-title {
+          text-align: left;
         }
 
         &-author {
@@ -126,7 +180,9 @@ body {
         }
 
         &-recommendation {
+          flex: 3;
           display: flex;
+          flex-direction: column;
         }
 
         &-summary {
@@ -138,7 +194,7 @@ body {
       }
 
       &__images {
-        flex: 1;
+        display: none;
 
         &-book {
         }
@@ -149,6 +205,13 @@ body {
 
       &__guest {
         flex: 2;
+        display: flex;
+        // border-top: solid 1px $grey-lightest;
+        padding-top: 1rem;
+
+        &-details {
+          flex: 1;
+        }
 
         &-name {
         }
@@ -156,10 +219,25 @@ body {
         &-bio {
           display: flex;
         }
+
+        &-picture {
+          width: 4rem;
+          display: inline-block;
+        }
       }
 
       &__link {
         display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        text-align: right;
+        color: $purple-bright;
+        text-decoration: none;
+
+        &-arrow {
+          margin-left: 0.5rem;
+        }
       }
     }
   }
