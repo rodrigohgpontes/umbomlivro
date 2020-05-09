@@ -7,7 +7,7 @@ import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 
 export const IndexPageTemplate = ({ image, title, subheading }) => (
-  <div>
+  <div className="main">
     <div className="header">
       <h1 className="header__title">{title}</h1>
       <h3 className="header__subtitle">{subheading}</h3>

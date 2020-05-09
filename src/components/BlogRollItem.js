@@ -54,9 +54,11 @@ class BlogRollItem extends React.Component {
 
           <div className="post__book-recommendation">
             <p className="post__book-summary">
+              <strong>Em suma</strong>{" "}
               {postData.frontmatter.recommendationsummary}
             </p>
             <p className="post__book-audience">
+              <strong>Bom pra quem</strong>{" "}
               {postData.frontmatter.recommendationaudience}
             </p>
           </div>
